@@ -1,0 +1,7 @@
+{% block content %}
+{% for image in images %}
+<ul>
+    <img height="100px" width="100px" src="{{image.image_field.url}}" alt="{{image.id}}">
+</ul>
+{% endfor %}
+{% endblock %}
