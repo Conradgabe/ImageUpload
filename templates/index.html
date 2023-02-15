@@ -1,28 +1,32 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'CSS_FOLDER/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'core/index.css' %}">
     <title>ImageUploader</title>
 </head>
 <body>
     <div class="main">
-        <div class="p-one">
-            <h2>upload your image</h2>
-            <h5>file should be png, jpeg...</h5>
-        </div>
-        <div class="form-one">
-            <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{form.as_p}}
-                <div class="p-two">
-                    <p>or</p>
-                </div>
-                <div class="button"><input type="submit" value="submit"></div>
-            </form>
+        <div class="one">
+            <div class="two">
+                <h2 id="p-one">Upload your image</h2>
+                <h5 id="p-two">file should be png, jpeg...</h5>
+            </div>
+            <div class="form-one">
+                <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% render_field form.image_field class='images' %}
+                    <div id="p-three">
+                        <p>or</p>
+                    </div>
+                    <div><input id="button" type="submit" value="Choose a file"></div>
+                </form>
+            </div>
         </div>
         
     </div>
