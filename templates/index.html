@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://kit.fontawesome.com/dbcc8731b7.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'core/index.css' %}">
     <title>ImageUploader</title>
 </head>
 <body>
+    <div class="loader-container">
+        <div class="spinner"></div>
+    </div>
     <div class="main">
         <div class="one">
             <div class="two">
@@ -20,7 +24,14 @@
             <div class="form-one">
                 <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% render_field form.image_field class='images' %}
+                    <div class="images">
+                        <label for="inputTag">
+                            <input name="pictures" id="inputTag" type="file" id="images">
+                            <div class="inside-p">
+                                <p id="imageName"><i class="fa-thin fa-images fa-9xl"></i></p>
+                            </div>
+                        </label>
+                    </div>
                     <div id="p-three">
                         <p>or</p>
                     </div>
@@ -28,7 +39,9 @@
                 </form>
             </div>
         </div>
-        
     </div>
+    <script src="{% statis 'js/script.js' %}">
+        
+    </script>
 </body>
 </html>

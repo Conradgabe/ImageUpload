@@ -1,0 +1,62 @@
+body {
+    background-color: rgba(250,250,251,255);
+    font-size: 16px;
+}
+
+.main {
+    background-color: rgba(255,255,255,255);
+    margin: 10em auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: .3em;
+    height: 28.7em;
+    width: 24em;
+    text-align: center;
+    line-height: 2em;
+    font-family: 'Dosis', sans-serif;
+}
+
+.first-one {
+    background-color: white;
+}
+
+#first-p {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.second-one {
+    background-color: blue;
+    margin: 0em auto 1.8em;
+    height: 16.5em;
+    width: 90%;
+    border-radius: .6em;
+    text-align: center;
+}
+
+.image-one {
+    margin: auto;
+    height: 16.5em;
+    width: 100%;
+    border-radius: .6em;
+}
+
+.third-one {
+    height: 2.4em;
+    width: 24.5em;
+}
+
+#copy-holder {
+    height: 1.8em;
+    width: 18.5em;
+    padding: .4em;
+}
+
+#button {
+    cursor: pointer;
+    background-color: rgba(47,128,237,255);
+    color: rgba(250,250,251,255);
+    padding: 0.7em 1em;
+    border: 0px solid white;
+    border-radius: 0.4em;
+}

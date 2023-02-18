@@ -1,7 +1,28 @@
-{% block content %}
-{% for image in images %}
-<ul>
-    <img height="100px" width="100px" src="{{image.image_field.url}}" alt="{{image.id}}">
-</ul>
-{% endfor %}
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/show.css' %}">
+    <title>Uploaded</title>
+</head>
+<body>
+    <div class="main">
+        <div class="first-one">
+            <h2 id="first-p">Uploaded Successfully!</h2>
+        </div>
+        <div class="second-one">
+            {% block content %}
+                    <img class="image-one" src="{{image_value.image_field.url}}" alt="{{image.id}}">
+
+            {% endblock %}
+        </div>
+        <div class="third-one">
+            <input id="copy-holder" type="text" placeholder="{{image.image_field.url}}"><input id="button" type="button" value="Copy Link">
+        </div>
+    </div>
+</body>
+</html>

@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.upload, name="upload"),
-    path('images/', views.images, name="images"),
-    path('<str:pk>/', views.image_delete, name="image-delete"),
+    path('image/', views.images, name="image"),
+    path('delete/<int:pk>/', views.image_delete, name="image-delete"),
+    path('load/', views.loading, name = "loading"),
 ]
