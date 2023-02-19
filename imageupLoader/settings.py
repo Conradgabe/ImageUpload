@@ -27,7 +27,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME' : CLOUDINARY_CLOUD_NAME, 
     'API_KEY' : CLOUDINARY_API_KEY, 
     'API_SECRET' : CLOUDINARY_API_SECRET,
-    'SECURE' : False,
+    'SECURE' : True,
     # api_proxy = "http://127.0.0.1:8000",
 }
 
