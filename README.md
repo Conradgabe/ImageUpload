@@ -2,7 +2,7 @@
 
 ![imageLoader](https://res.cloudinary.com/dc4zo7mdb/image/upload/v1/media/images/image_zjb2fp)
 
-Drag, drop or Browse your image and upload them to a remote server that stores them and generates a link to your uploaded image.
+Upload your image to store and generate a link which can be embedded in html <img> tag and across platform
 
 ![imageLoader](https://res.cloudinary.com/dc4zo7mdb/image/upload/v1/media/images/image3_t6tynb)
 
