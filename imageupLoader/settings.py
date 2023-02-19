@@ -13,23 +13,23 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-# import cloudinary
+import cloudinary
 
-# load_dotenv()
+load_dotenv()
 
-# # cloudinary environment variables
-# CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME")
-# CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET")
-# CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY")
-# CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
+# cloudinary environment variables
+CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME")
+CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET")
+CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY")
+CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 
-# CLOUDINARY_STORAGE = { 
-#     'CLOUD_NAME' : CLOUDINARY_CLOUD_NAME, 
-#     'API_KEY' : CLOUDINARY_API_KEY, 
-#     'API_SECRET' : CLOUDINARY_API_SECRET,
-#     'SECURE' : False,
-#     # api_proxy = "http://127.0.0.1:8000",
-# }
+CLOUDINARY_STORAGE = { 
+    'CLOUD_NAME' : CLOUDINARY_CLOUD_NAME, 
+    'API_KEY' : CLOUDINARY_API_KEY, 
+    'API_SECRET' : CLOUDINARY_API_SECRET,
+    'SECURE' : False,
+    # api_proxy = "http://127.0.0.1:8000",
+}
 
 # import cloudinary.api
 # import cloudinary.uploader
@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # # third party package
-    # 'cloudinary_storage',
+    'cloudinary_storage',
     # 'cloudinary'
 
     # Local app
@@ -154,7 +154,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
 MEDIA_ROOT = '/media/'
-MEDIA_URL = 'C:/Users/Hp/Desktop/Image_uploader/media/'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
