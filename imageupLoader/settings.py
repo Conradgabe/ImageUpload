@@ -10,7 +10,30 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+from dotenv import load_dotenv
 from pathlib import Path
+
+import cloudinary
+
+load_dotenv()
+
+# cloudinary environment variables
+CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME")
+CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET")
+CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY")
+CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
+
+CLOUDINARY_STORAGE = { 
+    'CLOUD_NAME' : CLOUDINARY_CLOUD_NAME, 
+    'API_KEY' : CLOUDINARY_API_KEY, 
+    'API_SECRET' : CLOUDINARY_API_SECRET,
+    'SECURE' : False,
+    # api_proxy = "http://127.0.0.1:8000",
+}
+
+# import cloudinary.api
+# import cloudinary.uploader
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +60,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # # third party package
+    'cloudinary_storage',
+    'cloudinary'
 
     # Local app
     'core.apps.CoreConfig',
@@ -133,3 +160,6 @@ MEDIA_URL = 'C:/Users/Hp/Desktop/Image_uploader/media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# cloudinary settings configuration
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
