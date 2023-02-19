@@ -12,7 +12,7 @@ body {
     height: 28.7em;
     width: 24em;
     text-align: center;
-    line-height: 2em;
+    line-height: 1.2em;
     font-family: 'Dosis', sans-serif;
 }
 
@@ -21,14 +21,15 @@ body {
 }
 
 #first-p {
+    margin: .5em auto .8em;
     font-size: 1.4em;
     font-weight: 500;
 }
 
 .second-one {
     background-color: blue;
-    margin: 0em auto 1.8em;
-    height: 16.5em;
+    margin: 0em auto 1.5em;
+    height: 15.5em;
     width: 90%;
     border-radius: .6em;
     text-align: center;
@@ -36,7 +37,7 @@ body {
 
 .image-one {
     margin: auto;
-    height: 16.5em;
+    height: 15.5em;
     width: 100%;
     border-radius: .6em;
 }
@@ -59,4 +60,8 @@ body {
     padding: 0.7em 1em;
     border: 0px solid white;
     border-radius: 0.4em;
+}
+
+.check {
+    margin: 1.2em;
 }
