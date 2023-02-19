@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dbcc8731b7.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://kit.fontawesome.com/dbcc8731b7.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'core/index.css' %}">
     <title>ImageUploader</title>
 </head>
@@ -26,22 +26,26 @@
                     {% csrf_token %}
                     <div class="images">
                         <label for="inputTag">
+                            <output></output>
+                            <div class="imagepicture">
+                                <i class="fa-sharp fa-solid fa-file-image fa-6x"></i>
+                            </div>
+                            <h3>Drag and Drop or Choose your image</h3>
                             <input name="pictures" id="inputTag" type="file" id="images">
                             <div class="inside-p">
-                                <p id="imageName"><i class="fa-thin fa-images fa-9xl"></i></p>
+                                <span id="imageName"></span>
                             </div>
                         </label>
                     </div>
+                    
                     <div id="p-three">
-                        <p>or</p>
+                        <p>and</p>
                     </div>
-                    <div><input id="button" type="submit" value="Choose a file"></div>
+                    <div><input onclick="LoaderFunction()" id="button" type="submit" value="Upload"></div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="{% statis 'js/script.js' %}">
-        
-    </script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

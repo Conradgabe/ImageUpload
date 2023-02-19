@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dbcc8731b7.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'core/show.css' %}">
     <title>Uploaded</title>
 </head>
 <body>
     <div class="main">
+        <div class="check">
+            <i class="fa-solid fa-circle-check fa-3x"></i>
+        </div>
         <div class="first-one">
             <h2 id="first-p">Uploaded Successfully!</h2>
         </div>
@@ -21,8 +25,10 @@
             {% endblock %}
         </div>
         <div class="third-one">
-            <input id="copy-holder" type="text" placeholder="{{image.image_field.url}}"><input id="button" type="button" value="Copy Link">
+            <input id="copy-holder" type="text" value=127.0.0.1:8000{{image_value.image_field.url}}>
+            <input onclick="CopyToClipboard()" id="button" type="button" value="Copy Link">
         </div>
     </div>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
