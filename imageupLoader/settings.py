@@ -48,7 +48,11 @@ SECRET_KEY = 'django-insecure-qp@(1nues=r^@ltfm&ruqqi!%lf+-+6fb3elsb!vf1%tmk$)$*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "https://upload-e9zl.onrender.com/",
+]
 
 
 # Application definition
@@ -59,11 +63,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+
+    # cloudinary storage
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     
     # # third party package
-    'cloudinary_storage',
-    # 'cloudinary'
+    'cloudinary',
 
     # Local app
     'core.apps.CoreConfig',
