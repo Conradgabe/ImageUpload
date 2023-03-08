@@ -50,6 +50,7 @@ SECRET_KEY = config("DJANGO_SECRET", default='django-insecure-qp@(1nues=r^@ltfm&
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 ALLOWED_HOSTS = [
+    "upload-e9zl.onrender.com",
     "localhost",
     "127.0.0.1",
     "https://upload-e9zl.onrender.com/",
