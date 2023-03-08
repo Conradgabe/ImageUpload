@@ -4,7 +4,7 @@
 ![imageLoader](https://res.cloudinary.com/dc4zo7mdb/image/upload/v1/media/images/image_zjb2fp)
 
 #### Upload your image to a remote storage. After upload, the app will generate a url.
-#### This generated URL can be embedded into HTML or used in the web browse
+#### This generated URL can be embedded into HTML or used in the web browser
 
 ![imageLoader](https://res.cloudinary.com/dc4zo7mdb/image/upload/v1/media/images/image4_za18eg)
 
