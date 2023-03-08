@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+from decouple import config
 
 import cloudinary
 
@@ -43,10 +44,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qp@(1nues=r^@ltfm&ruqqi!%lf+-+6fb3elsb!vf1%tmk$)$*'
+SECRET_KEY = config("DJANGO_SECRET", default='django-insecure-qp@(1nues=r^@ltfm&ruqqi!%lf+-+6fb3elsb!vf1%tmk$)$*')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 ALLOWED_HOSTS = [
     "localhost",

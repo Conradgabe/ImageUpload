@@ -1,0 +1,130 @@
+body {
+    background-color: rgba(250,250,251,255);
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+.main {
+    background-color: rgba(255,255,255,255);
+    margin: 8em auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: .3em;
+    height: 28.7em;
+    width: 24em;
+    text-align: center;
+}
+
+.one {
+    text-align: center;
+    margin: 2.0em auto;
+    line-height: 1.8em;
+    font-family: 'Dosis', sans-serif;
+}
+#p-one {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: auto;
+}
+
+#p-two {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin: auto;
+}
+
+#p-three {
+    font-size: 1em;
+    font-weight: 300;
+    margin: auto;
+}
+
+#button {
+    cursor: pointer;
+    background-color: rgba(47,128,237,255);
+    color: rgba(250,250,251,255);
+    padding: 0.5em 1.6em;
+    border: 0px solid white;
+    border-radius: 0.7em;
+}
+
+.images {
+    background-color: rgba(246,248,251,255);
+    border: .2em dashed rgba(193,216,247,255);
+    border-radius: 0.3em;
+    margin: 1.6em auto 0em;
+    padding: 1.3em 0em 0em;
+    height: 12.7em;
+    width: 87%;
+    text-align: center;
+}
+
+.imagepicture {
+    margin: auto;
+    text-align: center;
+    height: 6.3em;
+    width: 100%;
+}
+
+#inputTag {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.loader-container {
+    width: 100%;
+    height: 29em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: white;
+    z-index: 1;
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: rgba(193,216,247,255) transparent rgba(193,216,247,255) transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container-hidden {
+    display: none;
+}
+
+.loader-container-show {
+    display: inline-block;
+}
+
+.image {
+    border-radius: 0.6em;
+    width: 20.8em;
+    height: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: white;
+    z-index: 1;
+}
+
+#imgjv {
+    height: 12.0em;
+    width: 100%;  
+}
