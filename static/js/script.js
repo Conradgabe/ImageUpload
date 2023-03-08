@@ -11,9 +11,9 @@ window.addEventListener('load', () => {
 
 // image loader function 11
 function LoaderFunction() {
-    buttonObject.addEventListener('click', () => {
-        loaderContainer.classList.add('loader-container-show');
-    });
+    // buttonObject.addEventListener('click', () => {
+    //     loaderContainer.classList.add('loader-container-show');
+    // });
 };
 
 
